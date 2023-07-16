@@ -10,4 +10,4 @@
 ![搜索音乐](/img/图片.png "搜索音乐")
 ![加载动画](/img/grass.png "加载动画")
 # 其他
-制作简陋，请谅解，也可在我搭建的[一个网页](skyshadowhero.github.io/lab/3/)或[我的博客](skyshadowhero.github.io/music)上查看
+制作简陋，请谅解，也可在我搭建的[一个网页](https://skyshadowhero.github.io/lab/3/)或[我的博客](https://skyshadowhero.github.io/music)上查看
