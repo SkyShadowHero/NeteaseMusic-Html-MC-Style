@@ -119,6 +119,7 @@
 <div id="overlay" class="overlay"></div>
 
 <script>
+const api = "你的网易云音乐api"
 const keywordInput = document.getElementById('keyword');
 const searchBtn = document.getElementById('searchBtn');
 const resultDiv = document.getElementById('result');
@@ -144,7 +145,7 @@ searchBtn.addEventListener('click', function() {
   resultDiv.innerHTML = ''; 
   showOverlay();
 
-  const apiUrl = 'https://skyshadowhero.najiang.top/search?keywords=' + keywordInput.value;
+  const apiUrl = api + '/search?keywords=' + keywordInput.value;
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
@@ -189,7 +190,7 @@ function getSongHtml(song) {
   const artist = song.artists[0].name;
   const songId = song.id;
   const playUrl = 'https://music.163.com/song/media/outer/url?id=' + songId + '.mp3';
-  const downloadUrl = 'https://skyshadowhero.najiang.top/song/url?id=' + songId + '&returnFormat=base64';
+  const downloadUrl = api + '/song/url?id=' + songId + '&returnFormat=base64';
   
   const abbreviatedTitle = title.length > 30 ? title.slice(0, 28) + '...' : title;
 
@@ -207,15 +208,6 @@ function getSongHtml(song) {
         </div>`;
 }
 </script>
-
-<div id="wrapper">
-
-
-<footer style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #2299DD; color: white; padding: 10px;">
-  <div style="color: white;">©2022 - 2023 By 天影大侠</div>
-  <div>天影大侠的网易云音乐搜索</div>
-  <div>回到<a href="https://skyshadowhero.github.io/" style="color: white;">天影大侠的小博客</a></div>
-</footer>
 
 </div>
 </body>
